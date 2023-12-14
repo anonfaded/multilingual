@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Website</title>
+    <meta charset="UTF-8">
+    <style>
+        /* Optional: Style for the dropdown menu */
+        select {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="language">Select Language:</label>
+    <select id="language" onchange="changeLanguage(this.value)">
+        <option value="eng">🇬🇧 English</option>
+        <option value="ar">🇸🇦 Arabic</option>
+    </select>
+
+    <p id="hi">Welcome everyone!</p>
+
+    <script>
+        var language = {
+            eng: {
+                welcome: "Welcome everyone!"
+            },
+            ar: {
+                welcome: "أهلاً بالجميع!"
+            }
+        };
+
+        // Set default language
+        var defaultLanguage = 'eng';
+        hi.textContent = language[defaultLanguage].welcome;
+
+        function changeLanguage(lang) {
+            hi.textContent = language[lang].welcome;
+            location.hash = '#' + lang;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,1 +1,1 @@
-# multilingual
+# Multilingual feature in Javascript.
